@@ -1,0 +1,12 @@
+<h2>Edit User</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" value="{{ user.name }}"><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="{{ user.email }}"><br>
+    <label for="Role">Role:</label>
+    <input type="text" id="Role" name="Role" value="{{ user.role }}"><br>
+    <button type="submit">Save</button>
+</form>
+<a href="{% url 'users' %}">Cancel</a>
